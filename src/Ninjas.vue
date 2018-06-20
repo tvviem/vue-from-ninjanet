@@ -1,7 +1,11 @@
 <template>
-  <ul>
-      <li v-for="(item, index) in ninjas" :key="index"> {{ item }} </li>
-  </ul>
+  <div>
+    <h1>List of ninjas</h1>
+    <ul>
+        <li v-for="(item, index) in ninjas" :key="index"> {{ item }} </li>
+    </ul>
+  </div>
+
 </template>
 
 <script>
@@ -14,6 +18,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+h1 {
+  color: green;
+}
 </style>
