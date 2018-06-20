@@ -6,6 +6,7 @@
             <h3 v-show="lec.show">{{ lec.speciality }}</h3>
         </li>
     </ul>
+    <button v-on:click="deleteLecturer">Delete Lecturer</button>
   </div>
 </template>
 
@@ -20,6 +21,11 @@ export default {
   },
   data() {
     return {};
+  },
+  methods: {
+      deleteLecturer() {
+          this.lecturers.pop();
+      }
   }
 };
 </script>

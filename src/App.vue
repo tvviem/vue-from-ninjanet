@@ -1,8 +1,8 @@
 <template>
   <div>
-    <app-header></app-header>
+    <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
     <lecturer :lecturers="lecturers"></lecturer>
-    <app-footer></app-footer>
+    <app-footer :title="title"></app-footer>
   </div>
 </template>
 
@@ -26,8 +26,15 @@ export default {
         { name: "Karma", speciality: "Tester", show: false },
         { name: "doublefire", speciality: "Backend Technology", show: true },
         { name: "hkbao", speciality: "Backend Technology", show: false }
-      ]
-    };
+      ],
+
+      title: "Vue - doublefire learn"
+    }
+  },
+  methods: {
+    updateTitle(contentUpdated){
+      this.title = contentUpdated
+    }
   }
 };
 </script>
