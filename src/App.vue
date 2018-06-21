@@ -25,7 +25,7 @@ export default {
         { name: "hirosima", speciality: "Event Handling", show: true },
         { name: "Karma", speciality: "Tester", show: false },
         { name: "doublefire", speciality: "Backend Technology", show: true },
-        { name: "hkbao", speciality: "Backend Technology", show: false }
+        { name: "hkbao", speciality: "Design Technology", show: false }
       ],
 
       title: "Vue - doublefire learn"

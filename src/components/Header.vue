@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import { busEvent } from '../main'
+
 export default {
   props: {
     title: {
@@ -20,7 +22,9 @@ export default {
     changeTitle() {
       //  event in child component call methods in parent component
       // With parameter 
-      this.$emit('changeTitle','Vue - changed to tvviem')
+      // this.$emit('changeTitle','Vue - changed to tvviem')
+      this.title = 'EventBus - Vue magic'; // warning change props direct
+      busEvent.$emit('titleChanged', 'EventBus - Vue magic');
     }
   }
 }
